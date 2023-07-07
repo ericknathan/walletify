@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walletify - Splash</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/styles/global.css" />
+    <script src="./assets/scripts/tailwind@3.2.2.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#345AFA",
+              "primary-dark": "#2A48BD",
+            },
+            transitionProperty: {
+              filter: "filter",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      id="content"
+      class="h-full flex items-center justify-center w-[90vw] max-w-[30rem] mx-auto py-16"
+    >
+      <img src="./assets/images/icon-brand-walletify.svg" alt="👛 Walletify" />
+    </div>
+  </body>
+</html>
