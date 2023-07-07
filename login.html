@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walletify - Login</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/styles/global.css" />
+    <script src="./assets/scripts/tailwind@3.2.2.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#345AFA",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      id="content"
+      class="h-full flex flex-col justify-between w-[90vw] max-w-[30rem] mx-auto py-16 text-sm"
+    >
+      <!-- Header -->
+      <header class="space-y-2.5">
+        <h1 class="text-2xl font-bold">Bem-vindo de volta 👋</h1>
+        <p class="text-neutral-500">
+          Estamos felizes em vê-lo novamente. Acesse sua conta insindo suas
+          credenciais abaixo.
+        </p>
+      </header>
+
+      <!-- Content -->
+      <main>
+        <form class="flex flex-col">
+          <!-- Login tab selector -->
+          <div
+            class="bg-neutral-100 w-full flex gap-2.5 p-1.5 h-12 text-neutral-800 rounded-lg"
+          >
+            <button
+              type="button"
+              id="tab-email"
+              class="w-full h-full rounded-md focus:outline-primary bg-white"
+            >
+              Email
+            </button>
+            <button
+              type="button"
+              id="tab-phone"
+              class="w-full h-full rounded-md focus:outline-primary"
+            >
+              Celular
+            </button>
+          </div>
+
+          <!-- Login form -->
+          <div id="login-form">
+            <!-- Login input -->
+            <fieldset class="w-full relative">
+              <input
+                name="login"
+                id="login-input"
+                type="email"
+                placeholder="alan.turing@email.com"
+                aria-label="Endereço de email"
+                class="bg-neutral-100 px-6 h-14 rounded-lg w-full my-2 focus:outline-primary"
+              />
+              <button
+                class="absolute right-6 top-[50%] transform translate-y-[-50%] focus:outline-primary rounded-lg"
+                type="button"
+                id="clear-login-button"
+              >
+                <img src="./assets/images/icon-x.svg" alt="" />
+              </button>
+            </fieldset>
+
+            <!-- Password input -->
+            <fieldset class="w-full relative">
+              <input
+                name="password"
+                id="password-input"
+                type="password"
+                placeholder="••••••••••"
+                aria-label="Senha"
+                class="bg-neutral-100 px-6 h-14 rounded-lg w-full my-2 focus:outline-primary"
+                minlength="8"
+              />
+              <button
+                class="absolute right-6 top-[50%] transform translate-y-[-50%] focus:outline-primary rounded-lg"
+                type="button"
+                id="toggle-password-button"
+              >
+                <img src="./assets/images/icon-show.svg" alt="" />
+              </button>
+            </fieldset>
+          </div>
+
+          <!-- Login actions -->
+          <a
+            href="#"
+            class="text-neutral-500 text-end focus:outline-none focus:underline"
+            >Esqueceu sua senha?</a
+          >
+          <button
+            class="px-6 h-14 rounded-lg w-full bg-primary hover:brightness-90 transition-[filter] duration-300 text-white font-medium mt-14 focus:outline-primary outline-offset-2"
+          >
+            Entrar
+          </button>
+        </form>
+      </main>
+
+      <!-- Footer -->
+      <footer class="flex flex-col gap-6 text-neutral-500 text-center">
+        <div class="flex items-center gap-1">
+          <hr class="flex-1 bg-neutral-500" />
+          <span class="">ou faça login com outros provedores</span>
+          <hr class="flex-1 bg-neutral-500" />
+        </div>
+
+        <!-- Social login buttons -->
+        <div class="flex w-full gap-3 font-medium">
+          <button
+            class="flex h-14 w-full items-center justify-center gap-3 border rounded-lg border-neutral-300 bg-white hover:brightness-90 transition-[filter] duration-300 focus:outline-primary"
+          >
+            <img src="./assets/images/icon-brand-apple.svg" alt="" />
+            iCloud
+          </button>
+          <button
+            class="flex h-14 w-full items-center justify-center gap-3 border rounded-lg border-neutral-300 bg-white hover:brightness-90 transition-[filter] duration-300 focus:outline-primary"
+          >
+            <img src="./assets/images/icon-brand-google.svg" alt="" />
+            Google
+          </button>
+        </div>
+
+        <p>
+          Ainda não possui acesso?
+          <a
+            href="#"
+            class="text-primary font-semibold focus:outline-none focus:underline"
+            >Criar uma conta!</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
